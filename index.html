@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2DGP8YFL3S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2DGP8YFL3S');
+</script>
+
+  <meta charset="UTF-8">
+  <title>Welcome to Our Love World 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: linear-gradient(to right, #ffe6f0, #fff0f5);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #ff1493;
+      text-shadow: 0 0 10px #ff69b4;
+    }
+
+    p {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #4b004f;
+      margin: 20px 0;
+    }
+
+    input[type="password"] {
+      padding: 12px 20px;
+      border: 2px solid #ff69b4;
+      border-radius: 25px;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: #ff69b4;
+      border: none;
+      color: white;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff1493;
+      transform: scale(1.05);
+    }
+
+    #error {
+      margin-top: 15px;
+      color: red;
+      font-weight: bold;
+    }
+
+    .heart {
+      font-size: 2rem;
+      animation: pulse 1s infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    #transitionMsg {
+      display: none;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #form-section {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="heart">💓</div>
+
+  <!-- Form Section -->
+  <div id="form-section">
+    <h1>Our Love World Awaits You 💞</h1>
+    <p>"Sirf ek raaz hai jo apko humari  duniya tak le jaa sakta hai wifeyyy..."</p>
+    <input type="password" id="password" placeholder="Enter Secret Code 💌">
+    <br>
+    <button onclick="checkPassword()">Unlock 💘</button>
+    <div id="error"></div>
+  </div>
+
+  <!-- Transition Message Section -->
+  <div id="transitionMsg">
+    <h1>Wah Wifeyyy! Kaafi Smart Ho 😍</h1>
+    <p>Par itni jaldi bhi kya hai pahuchne ki? Thoda pyaar feel kar lo pehle ek baaar i love you bol do wifeyyyy... 🥹</p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const pwd = document.getElementById("password").value.trim();
+      const formSection = document.getElementById("form-section");
+      const transitionMsg = document.getElementById("transitionMsg");
+      const errorDiv = document.getElementById("error");
+
+      if (pwd === "2809") {
+        formSection.style.display = "none";
+        transitionMsg.style.display = "block";
+
+        setTimeout(() => {
+          window.location.href = "home.html";
+        }, 9000);
+      } else {
+        errorDiv.innerText = "🔐 Yeh raasta sirf dil se khulta hai… soch ke daalo baby 💞";
+      }
+    }
+  </script>
+
+</body>
+</html>
