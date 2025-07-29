@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Love Games 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #fff0f5;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(45deg, #ff69b4, #ff1493);
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .game-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .game-card:hover {
+      transform: scale(1.05);
+    }
+
+    .game-card a {
+      text-decoration: none;
+      color: #ff1493;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .back-btn {
+      margin: 20px;
+      display: inline-block;
+      text-decoration: none;
+      background: #f06292;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .game-card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Choose Your Love Game 💘</h1>
+  </header>
+
+  <div class="game-grid">
+    <div class="game-card">
+      <a href="Dance with me babe.html">1️⃣ Dance with me babe 💋</a>
+    </div>
+    <div class="game-card">
+      <a href="memory-timeline.html">2️⃣ Memory Timeline 🕰️</a>
+    </div>
+    <div class="game-card">
+      <a href="game3.html">3️⃣ Spin the Love Wheel 🎡</a>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-btn">⬅️ Back to Home</a>
+
+</body>
+</html>
