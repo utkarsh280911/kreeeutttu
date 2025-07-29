@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Memory Timeline 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #fff0f5;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #ff1493;
+      margin-bottom: 30px;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      width: 250px;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #ff69b4;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .memory {
+      margin-top: 30px;
+      display: none;
+    }
+
+    .memory img {
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      margin-top: 15px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 40px;
+      text-decoration: none;
+      background: #f06292;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Can You Unlock Our Memories? 🗝️💘</h2>
+  <p>When did we first meet? (Enter date in format YYYY-MM-DD)</p>
+  <input type="text" id="dateInput" placeholder="2025-05-28" />
+  <br/>
+  <button onclick="checkMemory()">Unlock Memory</button>
+
+  <div class="memory" id="memory1">
+    <h3>🎉 Our First Meet!</h3>
+    <img src="loveeee.jpeg" alt="First Meet Memory">
+    <p>That magical day when you walked into my life 🥺❤️</p>
+  </div>
+
+  <div class="memory" id="memory2">
+    <h3>💍 First Proposal</h3>
+    <img src="images/proposal.jpg" alt="Proposal Memory">
+    <p>That day you said yes — my happiest moment ever!</p>
+  </div>
+
+  <a href="games.html" class="back-btn">⬅️ Back to Games</a>
+
+  <script>
+    function checkMemory() {
+      const date = document.getElementById("dateInput").value;
+      if (date === "2025-05-28") {
+        document.getElementById("memory1").style.display = "block";
+      } else if (date === "2025-08-14") {
+        document.getElementById("memory2").style.display = "block";
+      } else {
+        alert("Oops! Try again with the correct date.");
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wifeyy Dance With Me – Forever Together 💃🕺</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #fff0f5;
+      text-align: center;
+      padding: 30px;
+      margin: 0;
+    }
+
+    h2 {
+      color: #ff1493;
+      margin-bottom: 20px;
+    }
+
+    .dance-video {
+      max-width: 90%;
+      height: auto;
+      margin: 20px auto;
+      display: none;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+    }
+
+    .btns {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #d81b60;
+    }
+
+    .surprise {
+      margin-top: 30px;
+      display: none;
+      font-size: 22px;
+      color: #008000;
+      font-weight: bold;
+    }
+
+    .heart {
+      font-size: 50px;
+      animation: pop 1s ease infinite alternate;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.2); }
+    }
+
+    .back-btn {
+      margin-top: 40px;
+      display: inline-block;
+      text-decoration: none;
+      background: #f06292;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Wifeyy Dance With Me – Forever Together Edition 💃🕺</h2>
+
+  <div class="btns">
+    <button onclick="showDance(1)">Dance Step 1</button>
+    <button onclick="showDance(2)">Dance Step 2</button>
+    <button onclick="showDance(3)">Dance Step 3</button>
+    <button onclick="showSurprise()">Final Step 💘</button>
+  </div>
+
+  <!-- 🎥 Dance Videos -->
+  <video id="dance1" class="dance-video" autoplay muted loop controls>
+    <source src="dance.mp4" type="video/mp4" />
+    Your browser does not support video.
+  </video>
+
+  <video id="dance2" class="dance-video" autoplay muted loop controls>
+    <source src="dancing-couple-cute.mp4" type="video/mp4" />
+    Your browser does not support video.
+  </video>
+
+  <video id="dance3" class="dance-video" autoplay muted loop controls>
+    <source src="dance 2.mp4" type="video/mp4" />
+    Your browser does not support video.
+  </video>
+
+  <!-- 💖 Surprise Message -->
+  <div class="surprise" id="surprise">
+    <div class="heart">💖</div>
+    <p>From the first step to the last twirl, I want to dance with you forever 💑</p>
+  </div>
+
+  <a href="games.html" class="back-btn">⬅️ Back to Games</a>
+
+  <script>
+    function scrollToElement(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    function showDance(step) {
+      const v1 = document.getElementById("dance1");
+      const v2 = document.getElementById("dance2");
+      const v3 = document.getElementById("dance3");
+
+      // Hide all videos and pause
+      [v1, v2, v3].forEach(v => {
+        v.pause();
+        v.style.display = "none";
+      });
+
+      // Hide surprise
+      document.getElementById("surprise").style.display = "none";
+
+      if (step === 1) {
+        v1.style.display = "block";
+        scrollToElement("dance1");
+        v1.muted = false;
+        v1.play();
+      } else if (step === 2) {
+        v2.style.display = "block";
+        scrollToElement("dance2");
+        v2.muted = false;
+        v2.play();
+      } else if (step === 3) {
+        const guess = prompt("Choose your favourite part of my  body 💭");
+
+        if (guess && guess.trim().toLowerCase() === "neck") {
+          v3.style.display = "block";
+          scrollToElement("dance3");
+          v3.muted = false;
+          v3.play();
+        } else {
+          alert("Nope 😜 Try again baby!");
+        }
+      }
+    }
+
+    function showSurprise() {
+      ["dance1", "dance2", "dance3"].forEach(id => {
+        const vid = document.getElementById(id);
+        vid.style.display = "none";
+        vid.pause();
+      });
+
+      document.getElementById("surprise").style.display = "block";
+      scrollToElement("surprise");
+    }
+
+    // Unmute on any first click
+    window.addEventListener("click", () => {
+      document.querySelectorAll("video").forEach(video => {
+        video.muted = false;
+      });
+    }, { once: true });
+  </script>
+
+</body>
+</html>
